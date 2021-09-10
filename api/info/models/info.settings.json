@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "infos",
+  "info": {
+    "name": "Info"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "About": {
+      "type": "text"
+    },
+    "Skills": {
+      "type": "richtext"
+    },
+    "Resume": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}
